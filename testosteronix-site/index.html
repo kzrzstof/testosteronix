@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-booki o Testosteronie</title>
+  <style>
+    :root {
+      --main-green: #2e2e2e;
+      --light-green: #a5d6a7;
+      --background: #f4fdf4;
+      --text-dark: #1b1b1b;
+      --accent: #66bb6a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+    }
+
+    .navbar {
+      background-color: var(--main-green);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .navbar a:hover {
+      color: var(--light-green);
+    }
+
+    .navbar-logo img {
+      height: 50px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .ebooks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .ebook-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .ebook-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .ebook-card h3 {
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .ebook-card p {
+      font-size: 0.95rem;
+    }
+
+    .buy-button {
+      background-color: var(--accent);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      background-color: var(--main-green);
+    }
+
+    .contact-section {
+      display: none;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelector('.hero').style.display = 'none';
+      document.querySelector('.ebooks').style.display = 'none';
+      document.querySelector('.contact-section').style.display = 'none';
+
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/testosteronix-logo.png" alt="Testosteronix logo" />
+    </div>
+    <div>
+      <a href="#ebooks" onclick="showSection('ebooks')">E-booki</a>
+      <a href="#contact" onclick="showSection('contact')">Kontakt</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <h1>Naturalna Optymalizacja Testosteronu</h1>
+    <p>
+      Praktyczne e-booki, które pomogą Ci zwiększyć poziom testosteronu, poprawić zdrowie i jakość życia. Sprawdzone strategie, suplementacja i styl życia — wszystko w jednym miejscu.
+    </p>
+  </section>
+
+  <section class="ebooks" id="ebooks">
+    <div class="ebook-card">
+      <img src="ebook1.jpg" alt="E-book 1" />
+      <h3>Testosteron 101</h3>
+      <p>Podstawowy przewodnik po naturalnym podnoszeniu testosteronu.</p>
+      <a class="buy-button" href="#">Kup teraz</a>
+    </div>
+
+    <div class="ebook-card">
+      <img src="ebook2.jpg" alt="E-book 2" />
+      <h3>Dieta a Hormony</h3>
+      <p>Jak żywienie wpływa na Twoją gospodarkę hormonalną?</p>
+      <a class="buy-button" href="#">Kup teraz</a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Kontakt z nami</h2>
+    <p><strong>Firma:</strong> TestoBooks Sp. z o.o.</p>
+    <p><strong>Adres:</strong> ul. Przykładowa 123, 00-000 Warszawa</p>
+    <p><strong>Telefon:</strong> +48 123 456 789</p>
+    <p><strong>Email:</strong> kontakt@testobooks.pl</p>
+  </section>
+</body>
+</html>
